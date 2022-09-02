@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="https://wwww.thymeleaf.org">
+<head> 
+<meta charset="ISO-8859-1">
+<title> Create a Protokoll </title>
+</head>
+<body>
+<h1> Hier kannst du nun Positionen hinzufügen: </h1>
+<form action="#" th:action="@{/addPosition}"
+th:object="${protokollWithId}" "method="post">
+
+Titel: <input type="text" th:field="*{protokollPosition.titel}" /> <br>
+Beschreibung: <input type="text" th:field="*{protokollPosition.beschreibung}" /> <br>
+
+<input type="submit" value="Submit">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://wwww.thymeleaf.org">
+<head> 
+<meta charset="ISO-8859-1">
+<title> Protokoll-Liste </title>
+</head>
+<body>
+<h1> Protokolle: </h1>
+<table> 
+<tr th:each="ProtokollV: ${protokollListe}">
+	<td th:text="${ProtokollV.id}"/>
+	<td th:text="${ProtokollV.termin}"/>
+	<td th:text="${ProtokollV.betreff}"/>
+	<td th:text="${ProtokollV.ort}"/>
+</tr>
+</table>
+<a href="/newProtokollForm"> neues Protokoll </a>
+<br>
+<a href="/index"> Zurück zur Startseite </a>
+<br><br><br>
+
+<br>
+<a href="/changeForm">Protokoll bearbeiten</a>
+</body>
+</html>

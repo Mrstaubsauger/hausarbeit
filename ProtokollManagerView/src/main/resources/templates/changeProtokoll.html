@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="https://wwww.thymeleaf.org">
+<head> 
+<meta charset="ISO-8859-1">
+<title> Create a Protokoll </title>
+</head>
+<body>
+<a>Hier kann man ändern:</a>
+<br>
+<form action="#" th:action="@{/changeProtokoll}"
+th:object="${changeProtokoll}" method="post">
+ID des zu ändernden Protokolls: <input type="text" th:field="*{id}" /> <br>
+neuer Termin: <input type="text" th:field="*{termin}" /> <br>
+neuer Betreff: <input type="text" th:field="*{betreff}" /> <br>
+neuer Ort: <input type="text" th:field="*{ort}" /> <br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

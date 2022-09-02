@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://wwww.thymeleaf.org">
+<head> 
+<meta charset="ISO-8859-1">
+<title> Create a Protokoll </title>
+</head>
+<body>
+<form action="#" th:action="@{/createProtokoll}"
+th:object="${newProtokoll}" method="post">
+Termin: <input type="text" th:field="*{termin}" /> <br>
+Betreff: <input type="text" th:field="*{betreff}" /> <br>
+Ort: <input type="text" th:field="*{ort}" /> <br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
